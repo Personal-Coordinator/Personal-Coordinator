@@ -1,4 +1,4 @@
-package com.example.personal_coordinator;
+package com.example.personalcoordinator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
