@@ -1,4 +1,4 @@
-package com.example.personal_coordinator.controller;
+package com.example.personalcoordinator.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
