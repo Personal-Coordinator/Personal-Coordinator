@@ -36,8 +36,6 @@ public class User implements UserDetails {
     private String lastName;
     @Column(name = "password")
     private String password;
-    @Column(name = "repeat_password")
-    private String repeatPassword;
     @Column(nullable = false)
     private boolean isDeleted = false;
 
