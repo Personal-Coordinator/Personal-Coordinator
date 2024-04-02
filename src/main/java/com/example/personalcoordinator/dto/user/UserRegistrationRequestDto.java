@@ -1,6 +1,5 @@
 package com.example.personalcoordinator.dto.user;
 
-import com.example.personalcoordinator.validation.fieldmatch.FieldMatch;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,8 +7,6 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 @Data
-@FieldMatch(first = "password", second = "repeatPassword",
-        message = "The password fields must match")
 public class UserRegistrationRequestDto {
     @NotBlank
     @Email
@@ -17,9 +14,6 @@ public class UserRegistrationRequestDto {
     @NotNull
     @Length(min = 8, max = 35)
     private String password;
-    @NotNull
-    @Length(min = 8, max = 35)
-    private String repeatPassword;
     @NotBlank
     private String firstName;
     @NotBlank
