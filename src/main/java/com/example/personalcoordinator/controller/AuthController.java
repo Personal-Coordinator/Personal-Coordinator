@@ -7,7 +7,6 @@ import com.example.personalcoordinator.dto.user.UserResponseDto;
 import com.example.personalcoordinator.exception.RegistrationException;
 import com.example.personalcoordinator.security.AuthenticationService;
 import com.example.personalcoordinator.service.UserService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -33,7 +32,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public UserResponseDto registerUser(@RequestBody @Valid UserRegistrationRequestDto requestDto)
+    public UserResponseDto registerUser(@RequestBody UserRegistrationRequestDto requestDto)
             throws RegistrationException {
         return userService.registerUser(requestDto);
     }
