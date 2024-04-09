@@ -6,10 +6,11 @@ import com.example.personalcoordinator.dto.user.UserRegistrationRequestDto;
 import com.example.personalcoordinator.dto.user.UserResponseDto;
 import com.example.personalcoordinator.exception.RegistrationException;
 import com.example.personalcoordinator.security.AuthenticationService;
-import com.example.personalcoordinator.service.UserService;
+import com.example.personalcoordinator.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 @RequestMapping("/auth")
 public class AuthController {
     private final UserService userService;
@@ -28,7 +30,6 @@ public class AuthController {
     @PostMapping("/login")
     public UserLoginResponseDto login(@RequestBody UserLoginRequestDto requestDto) {
         return authenticationService.authenticate(requestDto);
-
     }
 
     @PostMapping("/register")
