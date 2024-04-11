@@ -26,7 +26,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TaskController {
     private final TaskService taskService;
 
-    @Operation(summary = "add task")
+    @Operation(summary = "add task",
+            description = "Return task if task is added")
     @PostMapping
     TaskDto addTask(Authentication authentication,
                        @RequestBody CreateTaskRequestDto requestDto) {
@@ -37,13 +38,12 @@ public class TaskController {
     @Operation(summary = "Get all tasks",
             description = "Return all tasks for the current user")
     @GetMapping
-
     List<TaskDto> getAllTasks(Authentication authentication) {
         User user = (User) authentication.getPrincipal();
         return taskService.findAll(user.getId());
     }
 
-    @Operation(summary = "Update order status")
+    @Operation(summary = "Update task status")
     @PatchMapping("/{id}")
     TaskDto updateTaskStatus(@RequestBody UpdateTaskStatusDto requestDto,
                                @PathVariable Long id) {

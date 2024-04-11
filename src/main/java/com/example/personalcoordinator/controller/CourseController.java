@@ -27,7 +27,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class CourseController {
     private final CourseService courseService;
 
-    @Operation(summary = "add course")
+    @Operation(summary = "add course",
+            description = "Return course if course is added")
+
     @PostMapping("/add")
     CourseDto addCourse(Authentication authentication,
                         @RequestBody CreateCourseRequestDto requestDto) {
@@ -35,7 +37,8 @@ public class CourseController {
         return courseService.addCourse(user.getId(), requestDto);
     }
 
-    @Operation(summary = "add course")
+    @Operation(summary = "add course task",
+            description = "Return course if course task is added")
     @PostMapping("/add/{id}")
     CourseDto addCourseTask(Authentication authentication,
                         @RequestBody AddTaskToCourseRequestDto requestDto, @PathVariable Long id) {
