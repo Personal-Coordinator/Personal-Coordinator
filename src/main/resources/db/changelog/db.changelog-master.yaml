@@ -9,3 +9,7 @@ databaseChangeLog:
       file: db/changelog/changes/04-insert-into-roles-users-users_roles.yaml
   - include:
       file: db/changelog/changes/05-create-tasks-table.yaml
+  - include:
+      file: db/changelog/changes/06-create-course-table.yaml
+  - include:
+      file: db/changelog/changes/07-create-course_tasks-table.yaml

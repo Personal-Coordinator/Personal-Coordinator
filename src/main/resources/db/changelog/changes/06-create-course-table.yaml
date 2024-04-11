@@ -4,7 +4,7 @@ databaseChangeLog:
       author: me
       changes:
         - createTable:
-            tableName: tasks
+            tableName: courses
             columns:
               - column:
                   name: id
@@ -17,12 +17,28 @@ databaseChangeLog:
                   name: user_id
                   type: BIGINT
                   constraints:
-                    foreignKeyName: fk_tasks_user_id
+                    foreignKeyName: fk_courses_user_id
                     references: users(id)
                     nullable: false
               - column:
-                  name: name
+                  name: course_name
                   type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: link
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: image
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start_date
+                  type: Timestamp
                   constraints:
                     nullable: false
               - column:
