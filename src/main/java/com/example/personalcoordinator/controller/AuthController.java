@@ -14,19 +14,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin
-
 @RequestMapping("/auth")
 public class AuthController {
     private final UserService userService;
@@ -49,7 +41,7 @@ public class AuthController {
 
     @Operation(summary = "Return current user",
             description = "Return current user name")
-    @PostMapping("/current-user")
+    @GetMapping("/current-user")
     public CurrentUserResponseDto returnCurrentUser(Authentication authentication) {
         User user = (User) authentication.getPrincipal();
         return new CurrentUserResponseDto(user.getFirstName());
