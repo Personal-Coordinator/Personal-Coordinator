@@ -3,7 +3,7 @@ package com.example.personalcoordinator.security;
 import com.example.personalcoordinator.dto.user.UserLoginRequestDto;
 import com.example.personalcoordinator.dto.user.UserLoginResponseDto;
 import com.example.personalcoordinator.model.User;
-import com.example.personalcoordinator.service.UserService;
+import com.example.personalcoordinator.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

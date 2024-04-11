@@ -1,4 +1,4 @@
-package com.example.personalcoordinator.service;
+package com.example.personalcoordinator.service.user;
 
 import com.example.personalcoordinator.dto.user.UserRegistrationRequestDto;
 import com.example.personalcoordinator.dto.user.UserResponseDto;
