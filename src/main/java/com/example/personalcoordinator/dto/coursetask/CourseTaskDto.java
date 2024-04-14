@@ -1,9 +1,12 @@
 package com.example.personalcoordinator.dto.coursetask;
 
+import com.example.personalcoordinator.model.Status;
+
 public record CourseTaskDto(
         Long id,
         Long taskId,
         String taskName,
-        String taskDescription
+        String taskDescription,
+        Status status
 ){
 }

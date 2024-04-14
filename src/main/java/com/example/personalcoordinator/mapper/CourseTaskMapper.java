@@ -13,6 +13,8 @@ import org.mapstruct.MappingTarget;
 public interface CourseTaskMapper {
     @Mapping(target = "taskId", source = "task.id")
     @Mapping(target = "taskName", source = "task.name")
+    @Mapping(target = "taskDescription", source = "task.description")
+    @Mapping(target = "status", source = "task.status")
     CourseTaskDto toDto(CourseTask courseTask);
 
     @Mapping(target = "task", source = "taskId", qualifiedByName = "taskFromId")

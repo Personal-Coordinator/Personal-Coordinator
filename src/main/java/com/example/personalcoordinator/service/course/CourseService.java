@@ -3,7 +3,7 @@ package com.example.personalcoordinator.service.course;
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
 import com.example.personalcoordinator.dto.course.UpdateCourseStatusDto;
-import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseRequestDto;
+import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
 import java.util.List;
 
 public interface CourseService {
@@ -12,7 +12,7 @@ public interface CourseService {
 
     CourseDto addCourse(Long userId, CreateCourseRequestDto createCourseRequestDto);
 
-    CourseDto addCourseTasksByUserId(Long userId, AddTaskToCourseRequestDto requestDto,
+    CourseDto addCourseTasksByUserId(Long userId, AddTaskToCourseByInitialsRequestDto requestDto,
                                      Long courseId);
 
     CourseDto updateCourseStatus(UpdateCourseStatusDto updateCourseStatusDto, Long courseId);
