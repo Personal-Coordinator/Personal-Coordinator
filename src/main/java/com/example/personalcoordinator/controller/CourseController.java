@@ -3,7 +3,7 @@ package com.example.personalcoordinator.controller;
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
 import com.example.personalcoordinator.dto.course.UpdateCourseStatusDto;
-import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseRequestDto;
+import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
 import com.example.personalcoordinator.model.User;
 import com.example.personalcoordinator.service.course.CourseService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -41,7 +41,8 @@ public class CourseController {
             description = "Return course if course task is added")
     @PostMapping("/add/{id}")
     CourseDto addCourseTask(Authentication authentication,
-                        @RequestBody AddTaskToCourseRequestDto requestDto, @PathVariable Long id) {
+                            @RequestBody AddTaskToCourseByInitialsRequestDto requestDto,
+                            @PathVariable Long id) {
         User user = (User) authentication.getPrincipal();
         return courseService.addCourseTasksByUserId(user.getId(), requestDto, id);
     }

@@ -3,7 +3,10 @@ package com.example.personalcoordinator.service.course;
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
 import com.example.personalcoordinator.dto.course.UpdateCourseStatusDto;
+import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseRequestDto;
+import com.example.personalcoordinator.dto.task.CreateTaskRequestDto;
+import com.example.personalcoordinator.dto.task.TaskDto;
 import com.example.personalcoordinator.mapper.CourseMapper;
 import com.example.personalcoordinator.mapper.CourseTaskMapper;
 import com.example.personalcoordinator.model.Course;
@@ -12,6 +15,7 @@ import com.example.personalcoordinator.model.Status;
 import com.example.personalcoordinator.repository.CourseRepository;
 import com.example.personalcoordinator.repository.CourseTasksRepository;
 import com.example.personalcoordinator.repository.UserRepository;
+import com.example.personalcoordinator.service.task.TaskService;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +30,7 @@ public class CourseServiceImpl implements CourseService {
     private final CourseMapper courseMapper;
     private final CourseTaskMapper courseTaskMapper;
     private final CourseTasksRepository courseTaskRepository;
+    private final TaskService taskService;
 
     @Override
     public CourseDto getCourseByUserIdAndCourseId(Long userId, Long courseId) {
@@ -44,9 +49,15 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public CourseDto addCourseTasksByUserId(Long userId, AddTaskToCourseRequestDto requestDto,
+    public CourseDto addCourseTasksByUserId(Long userId,
+                                            AddTaskToCourseByInitialsRequestDto initialsRequestDto,
                                             Long courseId) {
         CourseDto courseDto = getCourseByUserIdAndCourseId(userId, courseId);
+        CreateTaskRequestDto createTaskRequestDto =
+                new CreateTaskRequestDto(initialsRequestDto.name(),
+                initialsRequestDto.description());
+        TaskDto taskDto = taskService.create(userId, createTaskRequestDto);
+        AddTaskToCourseRequestDto requestDto = new AddTaskToCourseRequestDto(taskDto.id());
         CourseTask courseTask = courseTaskMapper.toModel(requestDto);
         courseTask.setCourse(courseMapper.toModel(courseDto));
         courseTaskRepository.save(courseTask);
@@ -72,6 +83,10 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public void deleteCourse(Long courseId) {
+        List<CourseTask> courseTasks = courseTaskRepository.findAllByCourseId(courseId);
+        courseTasks.forEach(courseTask -> {
+            taskService.deleteById(courseTask.getTask().getId());
+        });
         courseRepository.deleteById(courseId);
     }
 
@@ -85,5 +100,9 @@ public class CourseServiceImpl implements CourseService {
         course.setStartDate(LocalDateTime.now());
         course.setImage(requestDto.image());
         return course;
+    }
+
+    private void deleteCourseTasks(Long courseId) {
+        courseTaskRepository.deleteAllByCourseId(courseId);
     }
 }
