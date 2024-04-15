@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-default-courses-table
+      author: me
+      changes:
+        - insert:
+            tableName: default_courses
+            columns:
+              - column:
+                  name: course_name
+                  value: java course
+              - column:
+                    name: link
+                    value: https://www.udemy.com/course/java-course/
+              - column:
+                    name: image
+                    value: https://www.udemy.com/course/java-course/
+              - column:
+                    name: description
+                    value: java course
+        - insert:
+            tableName: default_courses
+            columns:
+              - column:
+                    name: course_name
+                    value: python course
+              - column:
+                    name: link
+                    value: https://www.udemy.com/course/python-course/
+              - column:
+                    name: image
+                    value: https://www.udemy.com/course/python-course/
+              - column:
+                    name: description
+                    value: python course
+        - insert:
+            tableName: default_courses
+            columns:
+              - column:
+                  name: course_name
+                  value: html+css course
+              - column:
+                  name: link
+                  value: https://www.udemy.com/course/html-css-course/
+              - column:
+                  name: image
+                  value: https://www.udemy.com/course/html-css-course/
+              - column:
+                  name: description
+                  value: html+css course
+        - insert:
+            tableName: default_courses
+            columns:
+              - column:
+                  name: course_name
+                  value: cooking course
+              - column:
+                  name: link
+                  value: https://www.udemy.com/course/cooking-course/
+              - column:
+                  name: image
+                  value: https://www.udemy.com/course/cooking-course/
+              - column:
+                  name: description
+                  value: cooking course
+        - insert:
+            tableName: default_courses
+            columns:
+              - column:
+                  name: course_name
+                  value: filming course
+              - column:
+                  name: link
+                  value: https://www.udemy.com/course/filming-course/
+              - column:
+                  name: image
+                  value: https://www.udemy.com/course/filming-course/
+              - column:
+                  name: description
+                  value: filming course

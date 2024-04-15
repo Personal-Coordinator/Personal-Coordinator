@@ -8,8 +8,10 @@ import com.example.personalcoordinator.model.CourseTask;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
+import org.springframework.stereotype.Component;
 
 @Mapper(config = MapperConfig.class, uses = TaskMapper.class)
+@Component
 public interface CourseTaskMapper {
     @Mapping(target = "taskId", source = "task.id")
     @Mapping(target = "taskName", source = "task.name")
