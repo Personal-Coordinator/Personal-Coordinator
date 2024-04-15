@@ -2,6 +2,7 @@ package com.example.personalcoordinator.service.course;
 
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
+import com.example.personalcoordinator.dto.course.DeleteDto;
 import com.example.personalcoordinator.dto.course.UpdateCourseStatusDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
 import java.util.List;
@@ -19,5 +20,5 @@ public interface CourseService {
 
     List<CourseDto> findAllCourses(Long userId);
 
-    void deleteCourse(Long courseId);
+    DeleteDto deleteCourse(Long courseId);
 }

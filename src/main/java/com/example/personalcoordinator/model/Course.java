@@ -32,7 +32,7 @@ public class Course {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-    @Column(nullable = false, name = "course_name", unique = true)
+    @Column(nullable = false, name = "course_name")
     private String name;
     @Column(nullable = false, name = "description")
     private String description;

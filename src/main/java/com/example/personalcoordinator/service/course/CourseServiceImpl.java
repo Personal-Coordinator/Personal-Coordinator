@@ -2,6 +2,7 @@ package com.example.personalcoordinator.service.course;
 
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
+import com.example.personalcoordinator.dto.course.DeleteDto;
 import com.example.personalcoordinator.dto.course.UpdateCourseStatusDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseRequestDto;
@@ -82,12 +83,13 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public void deleteCourse(Long courseId) {
+    public DeleteDto deleteCourse(Long courseId) {
         List<CourseTask> courseTasks = courseTaskRepository.findAllByCourseId(courseId);
         courseTasks.forEach(courseTask -> {
             taskService.deleteById(courseTask.getTask().getId());
         });
         courseRepository.deleteById(courseId);
+        return new DeleteDto(courseId);
     }
 
     private Course createCourse(Long userId, CreateCourseRequestDto requestDto) {
