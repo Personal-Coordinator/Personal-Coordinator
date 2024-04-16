@@ -48,6 +48,7 @@ public class CourseController {
         return courseService.addCourseTasksByUserId(user.getId(), requestDto, id);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @Operation(summary = "Get all courses",
             description = "Return all courses for the current user")
     @GetMapping("/all")
