@@ -3,7 +3,7 @@ package com.example.personalcoordinator.controller;
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
 import com.example.personalcoordinator.dto.course.DeleteDto;
-import com.example.personalcoordinator.dto.course.UpdateCourseStatusDto;
+import com.example.personalcoordinator.dto.course.UpdateCourseDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
 import com.example.personalcoordinator.model.User;
 import com.example.personalcoordinator.service.course.CourseService;
@@ -58,7 +58,7 @@ public class CourseController {
 
     @Operation(summary = "Update course status")
     @PatchMapping("/{id}")
-    CourseDto updateCourseStatus(@RequestBody UpdateCourseStatusDto requestDto,
+    CourseDto updateCourseStatus(@RequestBody UpdateCourseDto requestDto,
                                 @PathVariable Long id) {
         return courseService.updateCourseStatus(requestDto, id);
     }

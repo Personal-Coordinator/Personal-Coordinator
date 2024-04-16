@@ -54,7 +54,6 @@ public class TaskServiceImpl implements TaskService {
         Task task = new Task();
         task.setUser(userService.getById(userId));
         task.setName(requestDto.name());
-        task.setDescription(requestDto.description());
         task.setStatus(Status.NOT_STARTED);
         return task;
     }
