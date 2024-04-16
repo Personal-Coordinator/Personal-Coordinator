@@ -8,73 +8,73 @@ databaseChangeLog:
             columns:
               - column:
                   name: course_name
-                  value: java course
+                  value: Java Certification Course
               - column:
                     name: link
-                    value: https://www.udemy.com/course/java-course/
+                    value: https://www.udemy.com/course/master-practical-java-development/
               - column:
                     name: image
-                    value: https://www.udemy.com/course/java-course/
+                    value: https://images.idgesg.net/images/article/2019/05/java_binary_code_gears_programming_coding_development_by_bluebay2014_gettyimages-1040871468_2400x1600-100795798-large.jpg?auto=webp&quality=85,70
               - column:
                     name: description
-                    value: java course
+                    value: Become a confident industry ready core Java developer and get certified as a Java professional!
         - insert:
             tableName: default_courses
             columns:
               - column:
                     name: course_name
-                    value: python course
+                    value: Python Developer
               - column:
                     name: link
-                    value: https://www.udemy.com/course/python-course/
+                    value: https://www.udemy.com/course/complete-python-developer-zero-to-mastery/
               - column:
                     name: image
-                    value: https://www.udemy.com/course/python-course/
+                    value: https://ioflood.com/blog/wp-content/uploads/2023/09/Collage-of-popular-Python-libraries-symbolic-icons-code-snippets-Python-logo.jpg
               - column:
                     name: description
-                    value: python course
+                    value: How to become a Python 3 Developer and get hired! Build 12+ projects, learn Web Development, Machine Learning + more!
         - insert:
             tableName: default_courses
             columns:
               - column:
                   name: course_name
-                  value: html+css course
+                  value: Real-World Websites with HTML and CSS
               - column:
                   name: link
-                  value: https://www.udemy.com/course/html-css-course/
+                  value: https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/
               - column:
                   name: image
-                  value: https://www.udemy.com/course/html-css-course/
+                  value: https://miro.medium.com/v2/resize:fit:960/1*OlyP02fRFe8pEkJgb6vGTQ.png
               - column:
                   name: description
-                  value: html+css course
+                  value: Learn modern HTML5, CSS3 and web design by building a stunning website for your portfolio! Includes flexbox and CSS Grid
         - insert:
             tableName: default_courses
             columns:
               - column:
                   name: course_name
-                  value: cooking course
+                  value: Kitchen Basics to Advanced
               - column:
                   name: link
-                  value: https://www.udemy.com/course/cooking-course/
+                  value: https://www.udemy.com/course/chefjames/
               - column:
                   name: image
-                  value: https://www.udemy.com/course/cooking-course/
+                  value: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtDfy4Wh4_Zt-KTJIGF3l0lYZvuLhmtUFb0W107AP0A&s
               - column:
                   name: description
-                  value: cooking course
+                  value: Culinary Skills for Home Cooks and Aspiring Chefs
         - insert:
             tableName: default_courses
             columns:
               - column:
                   name: course_name
-                  value: filming course
+                  value: Filmmaking Course
               - column:
                   name: link
-                  value: https://www.udemy.com/course/filming-course/
+                  value: https://www.udemy.com/course/indiefilmmaking/
               - column:
                   name: image
-                  value: https://www.udemy.com/course/filming-course/
+                  value: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCaFEhNQlrejxtNNsFGOzmCStrkw0fXavo33Jm4cRfHw&s
               - column:
                   name: description
-                  value: filming course
+                  value: Skip Film School! Learn to be a Film Director and Distribute Your Movie Around the World
