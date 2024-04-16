@@ -6,7 +6,6 @@ public record TaskDto(
         Long id,
         Long userId,
         String name,
-        String description,
         Status status
 ) {
 }

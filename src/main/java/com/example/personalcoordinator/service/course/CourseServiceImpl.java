@@ -3,7 +3,7 @@ package com.example.personalcoordinator.service.course;
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
 import com.example.personalcoordinator.dto.course.DeleteDto;
-import com.example.personalcoordinator.dto.course.UpdateCourseStatusDto;
+import com.example.personalcoordinator.dto.course.UpdateCourseDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseRequestDto;
 import com.example.personalcoordinator.dto.task.CreateTaskRequestDto;
@@ -55,8 +55,7 @@ public class CourseServiceImpl implements CourseService {
                                             Long courseId) {
         CourseDto courseDto = getCourseByUserIdAndCourseId(userId, courseId);
         CreateTaskRequestDto createTaskRequestDto =
-                new CreateTaskRequestDto(initialsRequestDto.name(),
-                initialsRequestDto.description());
+                new CreateTaskRequestDto(initialsRequestDto.name());
         TaskDto taskDto = taskService.create(userId, createTaskRequestDto);
         AddTaskToCourseRequestDto requestDto = new AddTaskToCourseRequestDto(taskDto.id());
         CourseTask courseTask = courseTaskMapper.toModel(requestDto);
@@ -66,11 +65,14 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public CourseDto updateCourseStatus(UpdateCourseStatusDto updateCourseStatusDto,
+    public CourseDto updateCourseStatus(UpdateCourseDto updateCourseStatusDto,
                                         Long courseId) {
         Course course = courseRepository.findById(courseId)
                 .orElseThrow(() -> new IllegalStateException("Course not found"));
         course.setStatus(updateCourseStatusDto.status());
+        course.setName(updateCourseStatusDto.name());
+        course.setDescription(updateCourseStatusDto.description());
+        course.setLink(updateCourseStatusDto.link());
         courseRepository.save(course);
         return courseMapper.toDto(course);
     }

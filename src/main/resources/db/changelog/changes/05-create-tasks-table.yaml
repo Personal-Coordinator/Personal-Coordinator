@@ -26,11 +26,6 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: description
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
                   name: status
                   type: enum('NOT_STARTED','IN_PROGRESS','COMPLETED')
                   defaultValue: 'NOT_STARTED'
