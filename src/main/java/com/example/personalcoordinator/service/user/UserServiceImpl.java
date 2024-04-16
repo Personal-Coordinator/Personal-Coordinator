@@ -9,6 +9,7 @@ import com.example.personalcoordinator.model.Role;
 import com.example.personalcoordinator.model.User;
 import com.example.personalcoordinator.repository.RoleRepository;
 import com.example.personalcoordinator.repository.UserRepository;
+import com.example.personalcoordinator.security.JwtUtil;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,6 +22,7 @@ public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
     private final RoleRepository roleRepository;
+    private final JwtUtil jwtUtil;
 
     @Override
     public UserResponseDto registerUser(UserRegistrationRequestDto requestDto)
@@ -33,7 +35,10 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(requestDto.getPassword()));
         Role role = roleRepository.findByName(Role.RoleName.ROLE_USER);
         user.setRoles(Set.of(role));
-        return userMapper.toDto(userRepository.save(user));
+        UserResponseDto dto = userMapper.toDto(userRepository.save(user));
+        String token = jwtUtil.generateToken(user.getUsername());
+        dto.setToken(token);
+        return dto;
     }
 
     @Override
