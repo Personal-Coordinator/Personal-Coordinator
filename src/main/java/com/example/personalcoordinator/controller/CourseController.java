@@ -63,6 +63,12 @@ public class CourseController {
         return courseService.updateCourseStatus(requestDto, id);
     }
 
+    @Operation(summary = "Get course by id")
+    @GetMapping("/{id}")
+    CourseDto getCourseById(@PathVariable Long id) {
+        return courseService.findCourseById(id);
+    }
+
     @Operation(summary = "Delete course")
     @DeleteMapping("/{id}")
     DeleteDto deleteCourse(@PathVariable Long id) {

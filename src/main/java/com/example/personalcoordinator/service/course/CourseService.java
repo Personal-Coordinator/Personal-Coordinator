@@ -20,5 +20,7 @@ public interface CourseService {
 
     List<CourseDto> findAllCourses(Long userId);
 
+    CourseDto findCourseById(Long courseId);
+
     DeleteDto deleteCourse(Long courseId);
 }
