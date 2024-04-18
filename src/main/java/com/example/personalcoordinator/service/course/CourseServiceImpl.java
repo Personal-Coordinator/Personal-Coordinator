@@ -85,6 +85,13 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    public CourseDto findCourseById(Long courseId) {
+        return courseRepository.findById(courseId)
+                .map(courseMapper::toDto)
+                .orElseThrow(() -> new IllegalStateException("Course not found"));
+    }
+
+    @Override
     public DeleteDto deleteCourse(Long courseId) {
         List<CourseTask> courseTasks = courseTaskRepository.findAllByCourseId(courseId);
         courseTasks.forEach(courseTask -> {
