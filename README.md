@@ -20,7 +20,6 @@ ___
     * User available:\
 ```POST:    /api/tasks``` - add task.\
 ```GET:     /api/tasks``` - retrieves all user`s tasks.\
-```PATCH:   /api/tasks/{id}``` - updates task\
 ```DELETE:  /api/tasks/{id}``` - deletes task.\
 ```DELETE:  /api/tasks/{id}``` - deletes task.
 5. **User Profile management endpoints:**
