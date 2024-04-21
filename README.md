@@ -6,8 +6,6 @@ ___
 ```POST: /api/auth/login``` - sign in for existing user.
 2. **Course management endpoints:**
     * User available:\
-```GET:    /api/courses/all```  - retrieves all user`s courses.\
-```GET:    /api/courses/{id}``` - retrieves course by id.\
 ```POST:   /api/courses/add``` - add course.\
 ```POST:   /api/courses/add``` - add course.\
 ```POST:   /api/courses/add/{id}``` - add task to course.\
