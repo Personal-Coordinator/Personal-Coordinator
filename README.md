@@ -21,9 +21,8 @@ ___
 ```POST:    /api/tasks``` - add task.\
      ```POST: qweqweqwe``` - add smth.\
      ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
+```PATCH:  /api/tasks/{id}``` - updates task.\
 ```GET:     /api/tasks``` - retrieves all user`s tasks.\
-```DELETE:  /api/tasks/{id}``` - deletes task.\
 ```DELETE:  /api/tasks/{id}``` - deletes task.\
      ```POST: qweqweqwe``` - add smth.\
      ```POST: qweqweqwe``` - add smth.\
