@@ -26,7 +26,7 @@ ___
 
 5. **User Profile management endpoints:**
    * User available:\
-```GET:  /api/user-profile``` - retrieves user profile info.\
+```GET:  /api/user-profile``` - retrieves user profile info.
 6. **Shopping cart management endpoints:**
     * User available:\
 ```POST:     /api/tasks``` - add task.\
