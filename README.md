@@ -22,12 +22,13 @@ ___
      ```POST: qweqweqwe``` - add smth.\
      ```POST: qweqweqwe``` - add smth.\
      ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
 ```GET:     /api/tasks``` - retrieves all user`s tasks.\
 ```DELETE:  /api/tasks/{id}``` - deletes task.\
 ```DELETE:  /api/tasks/{id}``` - deletes task.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+
 5. **User Profile management endpoints:**
    * User available:\
 ```GET:  /api/user-profile``` - retrieves user profile info.\
