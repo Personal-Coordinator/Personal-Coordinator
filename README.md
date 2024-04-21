@@ -7,19 +7,13 @@ ___
 2. **Course management endpoints:**
     * User available:\
 ```GET:    /api/courses/all```  - retrieves all user`s courses.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
 ```POST:   /api/courses/add``` - add course.\
-
 ```GET:    /api/courses/{id}``` - retrieves course by id.\
 ```POST:   /api/courses/add``` - add course.\
 ```POST:   /api/courses/add/{id}``` - add task to course.\
 ```PATCH:  /api/courses/{id}``` - updates course.\
 ```DELETE: /api/courses/{id}``` - deletes course.
+
 3. **Default Course management endpoints:**
     * User available:\
 ```GET: /api/default-course/all``` - retrieves all default courses.\
