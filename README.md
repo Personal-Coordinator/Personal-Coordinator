@@ -27,24 +27,3 @@ ___
 5. **User Profile management endpoints:**
    * User available:\
 ```GET:  /api/user-profile``` - retrieves user profile info.
-6. **Shopping cart management endpoints:**
-    * User available:\
-```POST:     /api/tasks``` - add task.\
-```GET:      /api/tasks``` - retrieves all user`s tasks.\
-```PATCH:    /api/tasks/{id}``` - updates task.\
-```DELETE:   /api/tasks/{id}``` - deletes task.
-7. **SMTHS**
-   * User smth:\
-     ```POST: qweqweqwe``` - add smth.\
-     ```DELETE:  /api/tasks/{id}``` - deletes task.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-     ```POST: qweqweqwe``` - add smth.\
-```GET:    /api/courses/{id}``` - retrieves course by id.\
-```POST:   /api/courses/add``` - add course.\
-```POST:   /api/courses/add/{id}``` - add task to course.\
-```PATCH:  /api/courses/{id}``` - updates course.\
-```DELETE: /api/courses/{id}``` - deletes course.
-     
