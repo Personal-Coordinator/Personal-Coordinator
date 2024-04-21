@@ -8,7 +8,7 @@ ___
     * User available:\
       ```GET: /api/courses/all```  - retrieves all user`s courses.\
       ```GET: /api/courses/{id}``` - retrieves course by id.\
-      ```POST: /api/courses/add``` - add course.\
+      ```POST: /api/courses/add``` - add course.
       ```POST: /api/courses/add/{id}``` - add task to course.\
       ```PATCH:  /api/courses/{id}``` - updates course.\
       ```DELETE: /api/courses/{id}``` - deletes course.
