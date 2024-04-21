@@ -19,6 +19,12 @@ ___
 4. **Task cart management endpoints:**
     * User available:\
 ```POST:    /api/tasks``` - add task.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
 ```GET:     /api/tasks``` - retrieves all user`s tasks.\
 ```DELETE:  /api/tasks/{id}``` - deletes task.\
 ```DELETE:  /api/tasks/{id}``` - deletes task.\
