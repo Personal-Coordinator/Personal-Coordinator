@@ -13,5 +13,9 @@ public interface TaskService {
 
     TaskDto update(UpdateTaskStatusDto requestDto, Long orderId);
 
+    int countCompletedUserTasks(Long userId);
+
+    int countAllUserTasks(Long userId);
+
     void deleteById(Long id);
 }

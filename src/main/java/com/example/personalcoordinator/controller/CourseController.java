@@ -30,7 +30,6 @@ public class CourseController {
 
     @Operation(summary = "add course",
             description = "Return course if course is added")
-
     @PostMapping("/add")
     CourseDto addCourse(Authentication authentication,
                         @RequestBody CreateCourseRequestDto requestDto) {
