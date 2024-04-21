@@ -31,3 +31,6 @@ ___
 ```GET:      /api/tasks``` - retrieves all user`s tasks.\
 ```PATCH:    /api/tasks/{id}``` - updates task.\
 ```DELETE:   /api/tasks/{id}``` - deletes task.
+7. **SMTHS**
+   * User smth:\
+     ```POST: qweqweqwe``` - add smth.
