@@ -25,3 +25,9 @@ ___
 5. **User Profile management endpoints:**
    * User available:\
      ```GET:    /api/user-profile``` - retrieves user profile info.\
+6. **Shopping cart management endpoints:**
+    * User available:\
+```POST:   /api/cart``` - puts book into shopping cart.\
+```GET:    /api/cat/``` - retrieves shopping cart.\
+```PUT:    /api/cart/cart-items/{cartItemId}``` - updates quantity of books.\
+```DELETE: /api/cart/cart-items/{cartItemId}``` - deletes book from cart.
