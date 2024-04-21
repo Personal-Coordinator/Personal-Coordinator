@@ -18,10 +18,10 @@ ___
       ```GET: /api/default-course/all``` - retrieves all default courses.\
 4. **Task cart management endpoints:**
     * User available:\
-      ```POST:   /api/tasks``` - add task.\
-      ```GET:    /api/tasks``` - retrieves all user`s tasks.\
-      ```PATCH:  /api/tasks/{id}``` - updates task.\
-      ```DELETE: /api/tasks/{id}``` - deletes task.
+```POST:   /api/tasks``` - add task.\
+```GET:    /api/tasks``` - retrieves all user`s tasks.\
+```PATCH:  /api/tasks/{id}``` - updates task.\
+```DELETE: /api/tasks/{id}``` - deletes task.
 5. **User Profile management endpoints:**
    * User available:\
      ```GET:    /api/user-profile``` - retrieves user profile info.\
