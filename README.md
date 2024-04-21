@@ -27,7 +27,7 @@ ___
      ```GET:    /api/user-profile``` - retrieves user profile info.\
 6. **Shopping cart management endpoints:**
     * User available:\
-```POST:   /api/tasks``` - add task.\
-```GET:    /api/tasks``` - retrieves all user`s tasks.\
-```PATCH:  /api/tasks/{id}``` - updates task.\
-```DELETE: /api/tasks/{id}``` - deletes task.
+```POST:    /api/tasks``` - add task.\
+```GET:     /api/tasks``` - retrieves all user`s tasks.\
+```PATCH:   /api/tasks/{id}``` - updates task.\
+```DELETE:  /api/tasks/{id}``` - deletes task.
