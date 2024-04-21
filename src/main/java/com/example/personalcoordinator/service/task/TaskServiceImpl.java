@@ -41,8 +41,20 @@ public class TaskServiceImpl implements TaskService {
         Task task = taskRepository.findById(taskId)
                 .orElseThrow(() -> new IllegalStateException("Task not found"));
         task.setStatus(requestDto.status());
+        task.setName(requestDto.name());
         taskRepository.save(task);
         return taskMapper.toDto(task);
+    }
+
+    @Override
+    public int countCompletedUserTasks(Long userId) {
+        return taskRepository
+                .findAllCompletedTasks(userId, Status.COMPLETED).size();
+    }
+
+    @Override
+    public int countAllUserTasks(Long userId) {
+        return taskRepository.findAllByUserId(userId).size();
     }
 
     @Override
