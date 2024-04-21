@@ -33,4 +33,6 @@ ___
 ```DELETE:   /api/tasks/{id}``` - deletes task.
 7. **SMTHS**
    * User smth:\
+     ```POST: qweqweqwe``` - add smth.\
      ```POST: qweqweqwe``` - add smth.
+     
