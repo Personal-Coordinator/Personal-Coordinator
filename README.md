@@ -21,13 +21,13 @@ ___
 ```POST:   /api/tasks``` - add task.\
 ```GET:    /api/tasks``` - retrieves all user`s tasks.\
 ```PATCH:  /api/tasks/{id}``` - updates task.\
-```DELETE:/api/tasks/{id}``` - deletes task.
+```DELETE: /api/tasks/{id}``` - deletes task.
 5. **User Profile management endpoints:**
    * User available:\
      ```GET:    /api/user-profile``` - retrieves user profile info.\
 6. **Shopping cart management endpoints:**
     * User available:\
-```POST:   /api/cart``` - puts book into shopping cart.\
-```GET:    /api/cat/``` - retrieves shopping cart.\
-```PUT:    /api/cart/cart-items/{cartItemId}``` - updates quantity of books.\
-```DELETE: /api/cart/cart-items/{cartItemId}``` - deletes book from cart.
+```POST:   /api/tasks``` - add task.\
+```GET:    /api/tasks``` - retrieves all user`s tasks.\
+```PATCH:  /api/tasks/{id}``` - updates task.\
+```DELETE: /api/tasks/{id}``` - deletes task.
