@@ -36,5 +36,10 @@ ___
      ```POST: qweqweqwe``` - add smth.\
      ```DELETE:  /api/tasks/{id}``` - deletes task.\
      ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
      ```POST: qweqweqwe``` - add smth.
      
