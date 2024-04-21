@@ -34,5 +34,7 @@ ___
 7. **SMTHS**
    * User smth:\
      ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
      ```POST: qweqweqwe``` - add smth.
      
