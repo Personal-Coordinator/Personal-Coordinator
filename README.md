@@ -8,6 +8,12 @@ ___
     * User available:\
 ```GET:    /api/courses/all```  - retrieves all user`s courses.\
 ```POST:   /api/courses/add``` - add course.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
+     ```POST: qweqweqwe``` - add smth.\
 ```GET:    /api/courses/{id}``` - retrieves course by id.\
 ```POST:   /api/courses/add``` - add course.\
 ```POST:   /api/courses/add/{id}``` - add task to course.\
@@ -19,7 +25,7 @@ ___
 4. **Task cart management endpoints:**
     * User available:\
 ```POST:    /api/tasks``` - add task.\
-```PATCH:  /api/tasks/{id}``` - updates task.\
+```PATCH:   /api/tasks/{id}``` - updates task.\
 ```GET:     /api/tasks``` - retrieves all user`s tasks.\
 ```DELETE:  /api/tasks/{id}``` - deletes task.
 
