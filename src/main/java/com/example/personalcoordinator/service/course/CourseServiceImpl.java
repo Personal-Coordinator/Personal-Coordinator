@@ -94,11 +94,17 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public DeleteDto deleteCourse(Long courseId) {
         List<CourseTask> courseTasks = courseTaskRepository.findAllByCourseId(courseId);
-        courseTasks.forEach(courseTask -> {
-            taskService.deleteById(courseTask.getTask().getId());
-        });
+        courseTasks.forEach(courseTask -> taskService.deleteById(courseTask.getTask().getId()));
         courseRepository.deleteById(courseId);
         return new DeleteDto(courseId);
+    }
+
+    @Override
+    public Long deleteCourseTask(Long courseId,Long taskId) {
+        CourseTask courseTask = courseTaskRepository.deleteTaskCourseId(courseId, taskId);
+        courseTaskRepository.deleteById(courseTask.getId());
+        taskService.deleteById(taskId);
+        return taskId;
     }
 
     private Course createCourse(Long userId, CreateCourseRequestDto requestDto) {

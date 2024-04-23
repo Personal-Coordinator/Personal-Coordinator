@@ -6,14 +6,14 @@ ___
 ```POST: /api/auth/login``` - sign in for existing user.
 2. **Course management endpoints:**
     * User available:\
-```POST:   /api/courses/add``` - add course.\
-```POST:   /api/courses/add``` - add course.\
-```POST:   /api/courses/add/{id}``` - add task to course.\
-```PATCH:  /api/courses/{id}``` - updates course.\
-```DELETE: /api/courses/{id}``` - deletes course.\
-```GET: /api/courses/all```  - retrieves all user`s courses.\
-```GET: /api/courses/{id}``` - retrieves course by id.
-
+      ```GET: /api/courses/all```  - retrieves all user`s courses.\
+      ```GET: /api/courses/{id}``` - retrieves course by id.\
+      ```GET: /api/courses/{id}``` - retrieves course by id.\
+      ```POST: /api/courses/add``` - add course.\
+      ```POST: /api/courses/add/{id}``` - add task to course(course id).\
+      ```PATCH:  /api/courses/{id}``` - updates course.\
+      ```DELETE: /api/courses/{id}``` - deletes course.\
+      ```DELETE: /api/courses/task/{id}``` - deletes course's task.
 3. **Default Course management endpoints:**
     * User available:\
 ```GET: /api/default-course/all``` - retrieves all default courses.\

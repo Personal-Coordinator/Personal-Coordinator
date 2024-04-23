@@ -23,4 +23,6 @@ public interface CourseService {
     CourseDto findCourseById(Long courseId);
 
     DeleteDto deleteCourse(Long courseId);
+
+    Long deleteCourseTask(Long courseId,Long taskId);
 }
