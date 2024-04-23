@@ -2,8 +2,8 @@ ___
 ## API Features Overview
 1. **Authentication management endpoints:**
     * Available for everybody:\
-      ```POST: /api/auth/register``` - registers a new user.\
-      ```POST: /api/auth/login``` - sign in for existing user.
+```POST: /api/auth/register``` - registers a new user.\
+```POST: /api/auth/login``` - sign in for existing user.
 2. **Course management endpoints:**
     * User available:\
       ```GET: /api/courses/all```  - retrieves all user`s courses.\
@@ -16,13 +16,14 @@ ___
       ```DELETE: /api/courses/task/{id}``` - deletes course's task.
 3. **Default Course management endpoints:**
     * User available:\
-      ```GET: /api/default-course/all``` - retrieves all default courses.\
+```GET: /api/default-course/all``` - retrieves all default courses.\
 4. **Task cart management endpoints:**
     * User available:\
-      ```POST:   /api/tasks``` - add task.\
-      ```GET:    /api/tasks``` - retrieves all user`s tasks.\
-      ```PATCH:  /api/tasks/{id}``` - updates task.\
-      ```DELETE: /api/tasks/{id}``` - deletes task.
-5**User Profile management endpoints:**
+```POST:    /api/tasks``` - add task.\
+```PATCH:   /api/tasks/{id}``` - updates task.\
+```GET:     /api/tasks``` - retrieves all user`s tasks.\
+```DELETE:  /api/tasks/{id}``` - deletes task.
+
+5. **User Profile management endpoints:**
    * User available:\
-     ```GET:    /api/user-profile``` - retrieves user profile info.\
+```GET:  /api/user-profile``` - retrieves user profile info.
