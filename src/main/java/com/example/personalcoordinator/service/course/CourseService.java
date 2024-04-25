@@ -5,6 +5,7 @@ import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
 import com.example.personalcoordinator.dto.course.DeleteDto;
 import com.example.personalcoordinator.dto.course.UpdateCourseDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
+import com.example.personalcoordinator.dto.task.TaskDto;
 import java.util.List;
 
 public interface CourseService {
@@ -13,8 +14,8 @@ public interface CourseService {
 
     CourseDto addCourse(Long userId, CreateCourseRequestDto createCourseRequestDto);
 
-    CourseDto addCourseTasksByUserId(Long userId, AddTaskToCourseByInitialsRequestDto requestDto,
-                                     Long courseId);
+    TaskDto addCourseTasksByUserId(Long userId, AddTaskToCourseByInitialsRequestDto requestDto,
+                                   Long courseId);
 
     CourseDto updateCourseStatus(UpdateCourseDto updateCourseStatusDto, Long courseId);
 

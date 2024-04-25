@@ -50,7 +50,7 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public CourseDto addCourseTasksByUserId(Long userId,
+    public TaskDto addCourseTasksByUserId(Long userId,
                                             AddTaskToCourseByInitialsRequestDto initialsRequestDto,
                                             Long courseId) {
         CourseDto courseDto = getCourseByUserIdAndCourseId(userId, courseId);
@@ -61,7 +61,8 @@ public class CourseServiceImpl implements CourseService {
         CourseTask courseTask = courseTaskMapper.toModel(requestDto);
         courseTask.setCourse(courseMapper.toModel(courseDto));
         courseTaskRepository.save(courseTask);
-        return courseMapper.toDto(courseMapper.toModel(courseDto));
+        courseMapper.toDto(courseMapper.toModel(courseDto));
+        return taskDto;
     }
 
     @Override
