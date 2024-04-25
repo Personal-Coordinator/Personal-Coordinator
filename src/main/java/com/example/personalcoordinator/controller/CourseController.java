@@ -2,7 +2,6 @@ package com.example.personalcoordinator.controller;
 
 import com.example.personalcoordinator.dto.course.CourseDto;
 import com.example.personalcoordinator.dto.course.CreateCourseRequestDto;
-import com.example.personalcoordinator.dto.course.DeleteCourseTaskDto;
 import com.example.personalcoordinator.dto.course.DeleteDto;
 import com.example.personalcoordinator.dto.course.UpdateCourseDto;
 import com.example.personalcoordinator.dto.coursetask.AddTaskToCourseByInitialsRequestDto;
@@ -76,9 +75,9 @@ public class CourseController {
     }
 
     @Operation(summary = "Delete task from course")
-    @DeleteMapping("/task/{id}")
-    Long deleteTaskFromCourse(@PathVariable Long id,@RequestBody DeleteCourseTaskDto requestDto) {
-        return courseService.deleteCourseTask(id, requestDto.taskId());
+    @DeleteMapping("/{taskId}/{id}")
+    Long deleteTaskFromCourse(@PathVariable Long taskId,@PathVariable Long id) {
+        return courseService.deleteCourseTask(id, taskId);
     }
 
 }
