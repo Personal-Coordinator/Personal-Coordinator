@@ -39,7 +39,8 @@ public class SecurityConfig {
                         auth -> auth
                                 .requestMatchers("/auth/**",
                                         "/error","/default-course/**",("/swagger-ui/**"),
-                                        "/courses/**", "/tasks/**", "/user-profile/**")
+                                        "/courses/**", "/tasks/**", "/user-profile/**",
+                                        "/courses/{taskId}/**")
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()

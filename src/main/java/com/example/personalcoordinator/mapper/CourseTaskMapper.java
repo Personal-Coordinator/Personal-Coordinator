@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 public interface CourseTaskMapper {
     @Mapping(target = "taskId", source = "task.id")
-    @Mapping(target = "taskName", source = "task.name")
+    @Mapping(target = "name", source = "task.name")
     @Mapping(target = "status", source = "task.status")
     CourseTaskDto toDto(CourseTask courseTask);
 
