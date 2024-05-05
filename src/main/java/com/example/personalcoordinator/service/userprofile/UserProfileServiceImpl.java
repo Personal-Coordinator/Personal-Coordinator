@@ -18,7 +18,7 @@ public class UserProfileServiceImpl implements UserProfileService {
         User user = userService.getById(userId);
         int allTasks = taskService.countAllUserTasks(userId);
         int completedTasks = taskService.countCompletedUserTasks(userId);
-        return new UserProfileDto(userId, user.getUsername(),
+        return new UserProfileDto(userId, user.getFirstName(),
                 user.getEmail(),completedTasks, allTasks);
     }
 }
