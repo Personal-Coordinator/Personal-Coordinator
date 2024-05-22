@@ -19,6 +19,7 @@ import com.example.personalcoordinator.repository.UserRepository;
 import com.example.personalcoordinator.service.task.TaskService;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -117,6 +118,7 @@ public class CourseServiceImpl implements CourseService {
         course.setLink(requestDto.link());
         course.setStartDate(LocalDateTime.now());
         course.setImage(requestDto.image());
+        course.setCourseTasks(Set.of());
         return course;
     }
 
